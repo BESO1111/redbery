@@ -14,6 +14,7 @@ setpageback(true)
     return<>
 
 {pageback?<App/>:""}
+
    <div className="pages1">
     <div className="page1info">
         <img src={"Vector.png"} alt="foto"  onClick={()=>beckClick(pageback)}/>
