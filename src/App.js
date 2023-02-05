@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Pages1 from "./pages/Pages1";
 
 function App() {
+  let [page, setpage] = useState(false);
+
+  function henderClick() {
+    setpage(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+     
+     
+     {page?<Pages1/> :  <div>
+      <div>
+        <img src="../photo/LOGO-02 3.png" alt="logo"></img>
+      </div>
+
+  
+      <button onClick={()=>henderClick(page)} className="addResume">
+        რეზიუმეს დამატება
+      </button>
+      </div>}
     </div>
   );
 }
